@@ -12,7 +12,6 @@ export class UsersController {
     @ApiQuery({name:"name",required:false})
     @Get()
     getUsers(@Query('name') name?:string):User[]{
-        console.log("in api Call =====");
         
         return this.usersService.findAll(name)
     }
